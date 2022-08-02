@@ -1,3 +1,5 @@
+"use srtict"
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +14,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const galleryEl = document.querySelector(".gallery");
+const imgArray = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="200px" /></li>`);
+galleryEl.insertAdjacentHTML("afterbegin", imgArray)
