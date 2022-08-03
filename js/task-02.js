@@ -10,7 +10,7 @@ const ingredArray = ingredients.map(ingredient => {
   listElement.textContent = ingredient;
   return listElement;
 });
-  ingredientsEl.after(...ingredArray);
+  ingredientsEl.append(...ingredArray);
 
 // ingredients.forEach(function (ingredient) {
 //   const listElement = document.createElement('li');
